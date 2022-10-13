@@ -1,0 +1,59 @@
+baseURL: https://lordvidex.netlify.app
+languageCode: 'en-us'
+title: Evan's blog
+theme: PaperMod
+paginate: 1
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+  disableXML: true
+
+
+params:
+  author: 'Evans Owamoyo'
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+  defaultTheme: dark
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  
+  homeInfoParams:
+    Title: Evans Owamoyo
+    Content: >
+      Software Engineer 
+  socialIcons:
+    - name: twitter
+      url: https://twitter.com/lordvidex
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/11320345/lordvidex
+    - name: github
+      url: https://github.com/lordvidex/
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    
+    - identifier: github
+      icon: ''
+      url: https://example.org
+      weight: 30
