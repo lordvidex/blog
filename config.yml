@@ -27,7 +27,7 @@ params:
     Here, I write articles, share insights and log my notes and thoughts.
   author: 'Evans Owamoyo'
   keywords: [Evans, Owamoyo, Blog, Archives, Logs, lordvidex]
-  images: [avatar.jpg]
+  images: [avatar.jpg, "Evans Owamoyo", "https://lordvidex.live/"]
 
   env: production
   ShowReadingTime: true
