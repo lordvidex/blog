@@ -3,6 +3,9 @@ title: "Tuning System Performance in Linux"
 date: 2022-10-14T02:35:59+03:00
 draft: true
 weight: 10
+summary: >
+    Red hat Enterprise Linux tutorial notes
+    <<KILL ☼ TUNING ☼ SCHEDULING>>
 author: 'Evans Owamoyo'
 categories: [Notes]
 tags: [linux, rhel]
