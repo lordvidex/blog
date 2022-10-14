@@ -21,7 +21,15 @@ assets:
   theme_color: '#FFD700'
 
 params:
+  title: Evans Owamoyo
+  description: >
+    Personal Blog of Evans Owamoyo.
+    Here, I write articles, share insights and log my notes and thoughts.
   author: 'Evans Owamoyo'
+  keywords: [Evans, Owamoyo, Blog, Archives, Logs, lordvidex]
+  images: [avatar.jpg]
+
+  env: production
   ShowReadingTime: true
   ShowShareButtons: true
   ShowBreadCrumbs: true
