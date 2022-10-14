@@ -1,0 +1,44 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    {{- if .imageUrl -}}
+    {{- $img := "" }}
+    {{- if not (urls.Parse .imageUrl).IsAbs }}
+    {{- $img = resources.Get .imageUrl }}
+    {{- end }}
+    {{- if $img }}
+    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+    {{- if hugo.IsExtended -}}
+    {{- $processableFormats = $processableFormats | append "webp" -}}
+    {{- end -}}
+    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+    {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+    {{- else if .imageHeight }}
+    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+    {{ else if .imageWidth }}
+    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+    {{ else }}
+    {{- $img = $img.Resize "150x150" }}
+    {{- end }}
+    {{- end }}
+    <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default " profile image" }}"
+        style="border-radius: 50%;" title="{{ .imageTitle }}" height="{{ .imageHeight | default 150 }}"
+        width="{{ .imageWidth | default 150 }}" />
+    {{- else }}
+    <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default " profile image" }}"
+        title="{{ .imageTitle }}" height="{{ .imageHeight | default 150 }}" style="border-radius: 50%;"
+        width="{{ .imageWidth | default 150 }}" />
+    {{- end }}
+    {{- end }}
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" site.Params.socialIcons }}
+    </footer>
+</article>
+{{- end -}}

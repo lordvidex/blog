@@ -1,12 +1,12 @@
 baseURL: https://lordvidex.netlify.app
 languageCode: 'en-us'
-title: Evan's blog
+title: Evans Owamoyo
 theme: PaperMod
-paginate: 1
+paginate: 10
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDrafts: false
+buildDrafts: true
 buildFuture: false
 buildExpired: false
 enableEmoji: true
@@ -15,6 +15,10 @@ pygmentsUseClasses: true
 minify:
   disableXML: true
 
+assets:
+  favicon: /favicon.ico
+  # gold 
+  theme_color: '#FFD700'
 
 params:
   author: 'Evans Owamoyo'
@@ -25,11 +29,16 @@ params:
   defaultTheme: dark
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+
+  mainSections: ['posts', 'notes']
   
   homeInfoParams:
     Title: Evans Owamoyo
     Content: >
       Software Engineer 
+    imageUrl: /avatar.jpg
+    imageHeight: 200
+    imageWidth: 200
   socialIcons:
     - name: twitter
       url: https://twitter.com/lordvidex
@@ -51,9 +60,14 @@ menu:
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 20
-    
-    - identifier: github
-      icon: ''
-      url: https://example.org
+      weight: 20    
+    - identifier: search
+      name: Search
+      url: /search/
       weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON 
