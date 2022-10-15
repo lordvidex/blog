@@ -13,6 +13,8 @@ enableEmoji: true
 pygmentsUseClasses: true
 disqusShortname: lordvidex
 
+googleAnalytics: G-96RFRJ202J
+
 minify:
   disableXML: true
 

@@ -9,6 +9,7 @@ summary: >
 author: 'Evans Owamoyo'
 categories: [Notes]
 tags: [linux, rhel]
+comments: false
 ---
 ## Signal
 A signal is a software input delivered to a process

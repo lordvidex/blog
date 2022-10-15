@@ -1,15 +1,20 @@
 ---
-title: "How to get the Fanatic badge easily on Stack Overflow the PRO way"
+title: Getting the Fanatic badge on Stack Overflow the PRO way
 date: 2022-03-16T13:48:38+03:00
 draft: false
 ShowToc: false
 cover:
-    image: /stack-overflow-fanatic-badge/fanatic-badge.png
-    alt: "Fanatic Badge Image" # alt text
-    relative: true # when using page bundles set this to true
+  image: /stack-overflow-fanatic-badge/fanatic-badge.png
+  alt: Fanatic Badge Image
+  relative: true
 weight: 1
-summary: "Automating your browser with “cron” and shell scripts ( Linux | MacOS )"
-author: 'Evans Owamoyo'
+summary: Automating your browser with “cron” and shell scripts ( Linux | MacOS )
+author: Evans Owamoyo
+description: '"Automating your browser with “cron” and shell scripts ( Linux | MacOS )"'
+categories: Scripting
+tags:
+  - sh
+  - stack-overflow
 ---
 
 Have you ever striven to get the Fanatic gold badge on stack overflow? **OR** Has your progress reset when you were on the 99th streak? **OR** Have you ever wanted to automate your browsers to open a website periodically?
@@ -28,7 +33,7 @@ Visiting the stack overflow website routinely can prove difficult if you have no
 
 I solved this issue by creating a [cron](https://en.wikipedia.org/wiki/Cron) job that opens my stack overflow profile while my system is on.
 
-I will provide two solutions for Mac OS Monterey ([here](#b6b9)) and Ubuntu 20.04 Linux OS ([here](#61fc)) respectively because I have tested the scripts on these platforms.
+I will provide two solutions for Mac OS Monterey ([here]({{< ref "#-mac-os" >}})) and Ubuntu 20.04 Linux OS ([here](#61fc)) respectively because I have tested the scripts on these platforms.
 
 ## Let’s Code
 
@@ -40,23 +45,23 @@ I will provide two solutions for Mac OS Monterey ([here](#b6b9)) and Ubuntu 20.0
 ```bash
 $ echo alias chrome="open -a 'Google Chrome'" >> ~/.zshrc 
 ```
-2. Create a sh script that opens your stack overflow profile (or opens any website you want) and save as cronjob.sh.
+2. Create a sh script that opens your stack overflow profile (or opens any website you want) and save as `cronjob.sh`.
 
 {{< gist lordvidex b491085f187f7a0505990ef6b1230b38 >}}
 
-<iframe src="https://medium.com/media/bdbe260a15548946a063571e00d44170" frameborder=0></iframe>
-
-2.5. Run zsh cronjob.sh and make sure it opens up your stack overflow page on Google Chrome.
+2.5. Run `zsh cronjob.sh` and make sure it opens up your stack overflow page on Google Chrome.
 
 3. Define and set the cron job
-> ***a. **The below command opens a list of cron jobs in [vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) where each line represents a cron job*
-
-    $ **crontab -e**
-> ***b. **Press i** **to enter insert mode and on a new line enter:*
+> a. The below command opens a list of cron jobs in [vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) where each line represents a cron job
+```bash
+$ crontab -e
+```
+# . . . {style="text-align: center;"}
+> b. Press `i` to enter insert mode and on a new line enter:
 
     0 01,11,23 * * * zsh /path/to/script/cronjob.sh
 
-* ** Note: Change */path/to/script/cronjob.sh* to the absolute path of the script file created in [(step 2)](#0712) .
+* ** Note: Change *`/path/to/script/cronjob.sh`* to the absolute path of the script file created in [(step 2)](#0712) .
 
 * The above command can be interpreted in the following way:
 
@@ -137,8 +142,7 @@ There is a catch anyways.
 > Cron jobs would not wake your system from sleep mode. So you have to use a cron time configuration that best suits you i.e. when your system is going to be switched on. Read more on creating cron jobs at [crontab.guru](https://crontab.guru/).
 
 ## UPDATE
-
-![](https://cdn-images-1.medium.com/max/2000/1*6UdKqwcSxYDGid9Ycoj-Lw.png)
+{{< figure align=center width=80% src=https://cdn-images-1.medium.com/max/2000/1*6UdKqwcSxYDGid9Ycoj-Lw.png >}}
 
 *Today is the 4th of July and I’ve gotten the badge, use CRON job today!😌*
 

@@ -2,8 +2,10 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-author: 'Evans Owamoyo'
 weight: 10
+summary: {{ title }}
+author: 'Evans Owamoyo'
 categories: [Notes]
 tags: []
+comments: false
 ---
