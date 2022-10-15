@@ -2,9 +2,8 @@
 title: Getting the Fanatic badge on Stack Overflow the PRO way
 date: 2022-03-16T13:48:38+03:00
 draft: false
-ShowToc: false
 cover:
-  image: /stack-overflow-fanatic-badge/fanatic-badge.png
+  image: images/fanatic-badge.png
   alt: Fanatic Badge Image
   relative: true
 weight: 1
@@ -56,89 +55,98 @@ $ echo alias chrome="open -a 'Google Chrome'" >> ~/.zshrc
 ```bash
 $ crontab -e
 ```
-# . . . {style="text-align: center;"}
+
 > b. Press `i` to enter insert mode and on a new line enter:
 
     0 01,11,23 * * * zsh /path/to/script/cronjob.sh
 
-* ** Note: Change *`/path/to/script/cronjob.sh`* to the absolute path of the script file created in [(step 2)](#0712) .
+* ** Note: Change *`/path/to/script/cronjob.sh`* to the absolute path of the script file created in [(step 2)](#-mac-os) .
 
 * The above command can be interpreted in the following way:
+```
+0 - 0 minutes
+01,11,23 - 1, 11 and 23 hours respectively # my active times
+* - all days of the month (1-31)
+* - all months (1-12)
+* - all days of the week (0-6)
 
-    0 - O minutes
-    01,11,23 - 1, 11 and 23 hours respectively # my active times
-    * - all days of the month (1-31)
-    * - all months (1-12)
-    * - all days of the week (0-6)
+# this cron time config is followed by the command to be run
+```
 
-    # this cron time config is followed by the command to be run
-> **c. **Press Esc to exit from *insert mode *and press :wq** **to save and quit the vim environment.
-> **d. **You should get a message like this:
+> c. Press `Esc` to exit from insert mode and press `:wq` to save and quit the vim environment. \
 
-    crontab: installing new crontab
-> **e. **You can check your cron jobs by entering the following command
-
-    $ **crontab -l** # displays list of cron jobs
-
-![](https://cdn-images-1.medium.com/max/2000/1*R0a2Vrf2AyY7QnKlt2T3iQ.gif)
+> d. You should get a message like this:
+```
+crontab: installing new crontab
+```
+> e. You can check your cron jobs by entering the following command
+```bash
+$ crontab -l # displays list of cron jobs
+```
+<!-- add an image using hugo function -->
+{{< figure align=center src=images/well-done.gif >}}
 
 ## # **Ubuntu**
-
-*The default browser of Ubuntu 20.04 is Firefox **BUT **I will be using **Google Chrome** because of [errors i encountered](https://discourse.mozilla.org/t/run-firefox-from-cron/87478) while running Firefox from cron, also, the default shell on Linux is bash. The commands to enter are basically similar with those entered above for Mac OS. But I’ll reiterate for clarity and reference purposes.*
+The default browser of Ubuntu 20.04 is Firefox **BUT** I will be using **Google Chrome** because of [errors i encountered](https://discourse.mozilla.org/t/run-firefox-from-cron/87478) while running Firefox from `cron`, also, the default shell on Linux is `bash`. The commands to enter are basically similar with those entered above for Mac OS. But I’ll reiterate for clarity and reference purposes.
 
 1. Test google-chrome, cron and bash
+```bash
+$ google-chrome https://stackoverflow.com
 
-    $ **google-chrome [https://stackoverflow.com](https://stackoverflow.com)** 
-    # this should open your page BUT if it does not install chrome
-    # with this guide: [https://itsfoss.com/install-chrome-ubuntu/](https://itsfoss.com/install-chrome-ubuntu/)
+# this should open your page BUT if it does not install chrome
+# with this guide: https://itsfoss.com/install-chrome-ubuntu/
 
-    $ **crontab -l **# this should list your cron jobs
+$ crontab -l # this should list your cron jobs
 
-    $ **bash --version **# prints out your bash version
+$ bash --version # prints out your bash version
+```
 
-2. Create a bash script to open Google Chrome and save as cronjob.sh
+2. Create a bash script to open Google Chrome and save as `cronjob.sh`
 
-<iframe src="https://medium.com/media/bdbe260a15548946a063571e00d44170" frameborder=0></iframe>
+{{<gist lordvidex b491085f187f7a0505990ef6b1230b38>}}
 
 2.5. Run bash cronjob.sh and make sure it opens up your stack overflow page on Google Chrome.
 
 3. Define and set the cron job
+```
+$ crontab -e 
 
-    $ **crontab -e **
-
-    # *you might be prompted to select an editor, pick you favorite*
-
+# you might be prompted to select an editor, pick you favorite
+```
 * Enter on a new line the following command
-
-    0 01,11,23 * * * bash /path/to/cronjob.sh
-
+```
+0 01,11,23 * * * bash /path/to/cronjob.sh
+```
 * The above command can be interpreted in the following way:
+```
+0 - 0 minutes
+01,11,23 - 1, 11 and 23 hours respectively # my active times
+* - all days of the month (1-31)
+* - all months (1-12)
+* - all days of the week (0-6)
 
-    0 - O minutes
-    01,11,23 - 1, 11 and 23 hours respectively # my active times
-    * - all days of the month (1-31)
-    * - all months (1-12)
-    * - all days of the week (0-6)
-
-    # this cron time config is followed by the command to be run
+# this cron time config is followed by the command to be run
+```
 
 * You should get a message like this:
-
-    crontab: installing new crontab
-
+```plain
+crontab: installing new crontab
+```
 * You can check your cron jobs by entering the following command
+```
+$ crontab -l # displays list of cron jobs
+```
 
-    $ **crontab -l** # displays list of cron jobs
-
-![](https://cdn-images-1.medium.com/max/2000/1*j4ZGUHGgtyjyIXY3ClP31g.gif)
+{{< figure align=center src=images/proud-of-you.gif >}}
 
 ## Conclusion
 
-Cron jobs are really cool and powerful when properly used. Also, they are easy to setup and manage. You can run your .py, .swift, .java scripts *(not just shell scripts) *from cron.
+Cron jobs are really cool and powerful when properly used. Also, they are easy to setup and manage. You can run your .py, .swift, .java scripts *(not just shell scripts)* from cron.
 
 There is a catch anyways.
 
-![gotcha!!](https://cdn-images-1.medium.com/max/2000/1*bPjHPLDIZqu8OCDNKOuJxQ.gif)*gotcha!!*
+{{< figure src="images/gotcha.gif" caption="gotcha" align=center >}}
+
 > Cron jobs would not wake your system from sleep mode. So you have to use a cron time configuration that best suits you i.e. when your system is going to be switched on. Read more on creating cron jobs at [crontab.guru](https://crontab.guru/).
 
 ## UPDATE

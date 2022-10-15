@@ -1,7 +1,7 @@
 baseURL: https://lordvidex.live
 languageCode: 'en-us'
 title: Evans Owamoyo
-theme: PaperMod
+theme: PaperModX
 paginate: 10
 
 enableInlineShortcodes: true
@@ -37,12 +37,17 @@ params:
   ShowShareButtons: true
   ShowBreadCrumbs: true
   ShowToc: true
+  TocOpen: true
   comments: true
   defaultTheme: dark
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
 
   mainSections: ['posts', 'notes']
+
+  # X specifics
+  TocSide: left
+
   
   homeInfoParams:
     Title: Evans Owamoyo
