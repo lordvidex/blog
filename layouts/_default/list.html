@@ -64,18 +64,18 @@
 <article class="{{ $class }}">
   {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
   {{- $imagePosition := "top" }}
-  {{- $isSide := false }}
+  {{- $isSideCover := false }}
 
   {{- if in (slice "left" "right") (.Param "cover.side") }}
   {{- $imagePosition = .Param "cover.side" }}
-  {{- $isSide = true }}
+  {{- $isSideCover = true }}
   {{- end }}
   
-  <div class="{{ if $isSide }}side-wrapper{{ end }}">
-    <div class="{{- if $isSide }}side-cover{{ end }}{{ if and ($isSide) (eq $imagePosition "right") }} second{{- end }}">
+  <div class="{{ if $isSideCover }}side-wrapper{{ end }}">
+    <div class="{{- if $isSideCover }}side-cover{{ end }}{{ if and ($isSideCover) (eq $imagePosition "right") }} second{{- end }}">
       {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
     </div>
-    <div class="{{ if $isSide }}side-content{{ end }}"> 
+    <div class="{{ if $isSideCover }}side-content{{ end }}"> 
       <header class="entry-header">
         <h2>
           {{- .Title }}

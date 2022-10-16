@@ -14,6 +14,9 @@ pygmentsUseClasses: true
 disqusShortname: lordvidex
 
 googleAnalytics: G-96RFRJ202J
+analytics:
+  google:
+    SiteVerificationTag: G-96RFRJ202J
 
 minify:
   disableXML: true

@@ -1,28 +1,45 @@
 {{- define "main" }}
 
+{{- $imagePosition := "top" }}
+{{- $isSideCover := false }}
+{{- if in (slice "left" "right") (.Param "cover.side") }}
+{{- $imagePosition = .Param "cover.side" }}
+{{- $isSideCover = true }}
+{{- end }}
+
 <article class="post-single">
   <header class="post-header">
-    {{ partial "breadcrumbs.html" . }}
-    <div>
-      <h1 class="post-title">
-        {{ .Title }}
-        {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-      </h1>
-      {{- if .Description }}
-      <div class="post-description">
-        {{ .Description }}
+    <div class="{{ if $isSideCover }}side-wrapper{{ end }}" style="gap: 20px;">
+      {{- if $isSideCover }}
+      <div class="side-cover">
+        {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+        {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
       </div>
-      {{- end }}
-      {{- if not (.Param "hideMeta") }}
-      <div class="post-meta">
-        {{- partial "post_meta.html" . -}}
-        {{- partial "translation_list.html" . -}}
+      {{- end}}
+      <div class="{{ if $isSideCover }}side-content{{ end }}">
+        {{ partial "breadcrumbs.html" . }}
+        <h1 class="post-title">
+          {{ .Title }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h1>
+        {{- if .Description }}
+        <div class="post-description">
+          {{ .Description }}
+        </div>
+        {{- end }}
+        {{- if not (.Param "hideMeta") }}
+        <div class="post-meta">
+          {{- partial "post_meta.html" . -}}
+          {{- partial "translation_list.html" . -}}
+        </div>
+        {{- end }}
       </div>
-      {{- end }}
-  </div>
+    </div>
   </header>
   {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- if not $isSideCover }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- end }}
   {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
   {{- partial "share_icons.html" . -}}
   {{- end }}
