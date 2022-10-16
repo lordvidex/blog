@@ -1,0 +1,25 @@
+.side-cover .entry-cover img {
+    width: 100px;
+    height: 100px;
+}
+
+.side-content {
+    flex-grow: 1;
+}
+
+.side-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.second {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+}
+
+.tag-entry .entry-cover {
+    display: flex;
+}
