@@ -2,7 +2,6 @@
 title: systemd
 date: 2022-10-27T07:51:00+03:00
 draft: false
-weight: 10
 summary: managing services and changing default targets
 author: Evans Owamoyo
 categories:
@@ -13,7 +12,6 @@ tags:
 comments: false
 slug: systemd
 ---
-# systemd
 - it is a convention for daemon progams to end in the letter **d**
 
 * systemctl command is used to manage units e.g. display available units `systemctl -t help`
