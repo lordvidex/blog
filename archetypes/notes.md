@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" " " }}"
 date: {{ .Date }}
 draft: true
-summary: {{ title }}
+summary: Excerpt from ...
 author: 'Evans Owamoyo'
 categories: [Notes]
 tags: []
