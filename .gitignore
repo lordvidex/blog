@@ -1,5 +1,6 @@
 /public
 .vscode/
 frontmatter.json
+.frontmatter/
 **/.DS_Store
 .idea/
