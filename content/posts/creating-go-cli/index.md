@@ -19,13 +19,12 @@ tags:
   - CLI
 ---
 ## Intro 🚪
-Go is an open source programming language supported by Google. It has gained it's grounds 
+Go is an open source programming language supported by Google. It has gained it's grounds in the programming world due to it's simplicity and speed. It is a statically typed language with a syntax similar to C. It is a great language for building command line interfaces (CLI), Cloud/DevOp tools, Networking and Backend server applications. In this article, I will be giving an overview of how I built the `gomeasure` tool with Go.
 ## The Journey 🚲
  <!-- I learnt the basics of Go in roughly 3 days, and I enjoyed the experience 😋 because of the interesting nature of the language. I also shared how I learn programming languages fast in this [article](https://evansowamoyo.com/posts/learning-programming-languages-fast/). 
  After mastering the syntax, I worked on some [open source projects](https://github.com/lordvidex?tab=repositories&language=go)   I decided to create a CLI tool in Go.
  -->
-<!-- Hunting for project ideas -->
-I was hunting for project ideas in go when at work, there was a need to calculate the weight (files count) of directories in a project.
+I've always wanted to build a CLI tool but ideas have not been forthcoming until one fateful day at work meeting. There was a need to calculate the weight (files count) of directories in a project.
 Hence, I wrote a simple Go script which evolved into the `gomeasure` CLI tool.
 ## Why I built with Go? 🤔
 I chose Go because of the following reasons:
@@ -35,6 +34,8 @@ I've developed the habit of learning at least one new programming language every
 The `flag`, `os` and `fmt` packages are enough for building a simple CLI tool. This provides flag parsing out of the box compared to other languages like Java where I would have parsed arguments manually. Anyways, I extended these packages with the `github.com/spf13/cobra` package which made building even easier.
 ### Collaboration and community.
 I learnt and built the tool with a friend, [Ahmed Helali](https://escalopa.live/). We both have a passion for open source and we wanted to build something together.
+### Small binaries
+Go binaries are very small in size. The typical size of a Go binary is 2-5 MB. This is a great advantage because the binary has a small memory footprint (*we don't want a memory hog*), there is no dependency overhead and binaries can be easily shared.
 ### Cross-platform support (Windows, Linux, Mac)
 Go is a compiled language and it compiles to a single binary file which can be run on any platform. This is unlike interpreted languages like Python and JavaScript which require a runtime environment to run. This makes Go a good choice for building CLIs. I built the tool for various platforms in a CI/CD environment and it worked on all platforms without issues.
 <!-- - I started with the website and it had a lot of examples and tutorials
