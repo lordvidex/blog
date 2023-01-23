@@ -10,7 +10,7 @@ weight: 1
 summary: Automating your browser with “cron” and shell scripts ( Linux | MacOS )
 author: Evans Owamoyo
 description: '"Automating your browser with “cron” and shell scripts ( Linux | MacOS )"'
-categories: Scripting
+categories: [Scripting]
 tags:
   - sh
   - stack-overflow
