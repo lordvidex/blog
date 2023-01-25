@@ -69,7 +69,7 @@ In my first year at the University of Lagos, I met a lot of friends and seniors 
 I learnt backend web development with ExpressJS. This was the first ever server that I built, and I created and exposed endpoints that were consumed by the apps I was building at the time. I really never learnt Javascript actively, it just kind of clicked. I had to take some tutorials to learn ExpressJS on the other hand because the concepts of server and the whole backend was strange at the time.
 
 ## Flutter and Dart
-{{<figure src="images/flutter.svg" width="200">}}}
+{{<figure src="images/flutter.svg" width="200">}}
 A friend recommended Flutter to me and I agreed to look into Flutter because it was built by Google and also because it promised to build cross-platform mobile applications. This meant that learning Flutter would actually make me write both Android and iOS apps, so I gave it a shot and it was a very long shot 😂 (because I still use it to date).
 I immediately started using Flutter because:
 - building UI is wayyy easier than building natively with Java
@@ -105,12 +105,14 @@ Altogether, I really enjoyed iOS development, Xcode, and the Swift programming s
 
 ## TypeScript 
 {{<figure src="images/ts.png" height="200">}}
-Finally, developers were starting to see what I saw wrong in Javascript. I jumped on the train when Typescript came on board and some of the projects I worked on at [Paytrybe](https://paytrybe.com) were built with Typescript.
+Finally, developers were starting to see what I saw wrong in Javascript. I jumped on the train when Typescript came on board and some of the projects I worked on, at [Paytrybe](https://paytrybe.com) were built with Typescript.  
+Typescript is a very nice language and I always advice backend developers to check out [NestJS](https://nestjs.com/). Nest is a progressive Node.js framework that uses Typescript and makes backend development a breeze. It utilises the power of decorators, generics, interfaces, dependency injection and many other OOP stuff and best practices, that JS was missing.  
+If I had to build a LTS server in the shortest possible time, I'd use NestJS.
 
 ## Go
 {{<figure src="images/go.png" height="200">}}
 I started learning Go programming language in the summer of 2022 and my growth in the language has been extremely rapid. First, I learnt the syntax in less than two days, but I guess everyone has similar experiences learning Go because Go is a very simplistic and yet very powerful language. It's easy to get addicted to Go because it combines the best of many worlds. Currently, this is my *go-to* programming languge *(Sorry Java 🫠)*. I explained the reasons why I started learning Go here in [my other article.](https://lordvidex.live/posts/creating-go-cli/)  
-Learning Go means that I had to learn about containerization, microservices, tooling and profiling.. Go is very fascinating, and there is so much to learn writing Go. I have built a lot of end user applications as well as open source libraries in Go. I have also contributed to several open source Go libraries.
+Learning Go means that I had to learn about containerization, microservices, tooling and profiling.. Go is very fascinating, and there is so much to learn writing Go. I have built a lot of end user applications as well as open source libraries in Go. I have also contributed to several open source Go libraries. You can check them out in my [Github repo.](https://github.com/lordvidex?tab=repositories&q=&type=&language=go&sort=)
 
 ## Docker
 {{<figure src="images/docker.png" width="200">}}
