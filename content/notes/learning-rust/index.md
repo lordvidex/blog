@@ -16,7 +16,7 @@ categories:
 tags:
   - LOTY2023
   - LanguageChallenge
-comments: false
+comments: true
 slug: rust-day-one
 ---
 ## Intro 🚪
