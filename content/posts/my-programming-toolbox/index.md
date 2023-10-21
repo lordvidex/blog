@@ -111,7 +111,7 @@ If I had to build a LTS server in the shortest possible time, I'd use NestJS.
 
 ## Go
 {{<figure src="images/go.png" height="200">}}
-I started learning Go programming language in the summer of 2022 and my growth in the language has been extremely rapid. First, I learnt the syntax in less than two days, but I guess everyone has similar experiences learning Go because Go is a very simplistic and yet very powerful language. It's easy to get addicted to Go because it combines the best of many worlds. Currently, this is my *go-to* programming languge *(Sorry Java 🫠)*. I explained the reasons why I started learning Go here in [my other article.](https://lordvidex.live/posts/creating-go-cli/)  
+I started learning Go programming language in the summer of 2022 and my growth in the language has been extremely rapid. First, I learnt the syntax in less than two days, but I guess everyone has similar experiences learning Go because Go is a very simplistic and yet very powerful language. It's easy to get addicted to Go because it combines the best of many worlds. Currently, this is my *go-to* programming languge *(Sorry Java 🫠)*. I explained the reasons why I started learning Go here in [my other article.](https://lordvidex.netlify.app/posts/creating-go-cli/)  
 Learning Go means that I had to learn about containerization, microservices, tooling and profiling.. Go is very fascinating, and there is so much to learn writing Go. I have built a lot of end user applications as well as open source libraries in Go. I have also contributed to several open source Go libraries. You can check them out in my [Github repo.](https://github.com/lordvidex?tab=repositories&q=&type=&language=go&sort=)
 
 ## Docker
