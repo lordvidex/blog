@@ -1,4 +1,4 @@
-baseURL: https://lordvidex.netlify.app
+baseURL: https://blog.lordvidex.me.uk
 languageCode: 'en-us'
 title: Evans Owamoyo
 theme: PaperModX
@@ -33,7 +33,7 @@ params:
     Here, I write articles, share insights and log my notes and thoughts.
   author: 'Evans Owamoyo'
   keywords: [Evans, Owamoyo, Blog, Archives, Logs, lordvidex]
-  images: [avatar.jpg, "Evans Owamoyo", "https://lordvidex.netlify.app/"]
+  images: [avatar.jpg, "Evans Owamoyo", "https://blog.lordvidex.me.uk/"]
 
   env: production
   ShowReadingTime: true
