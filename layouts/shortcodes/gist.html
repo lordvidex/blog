@@ -1,0 +1,6 @@
+{{- $user := .Get 0 -}}
+{{- $id := .Get 1 -}}
+{{- $query := "" -}}
+{{- with .Get 2 -}}{{- $query = printf "?%s" (querify "file" .) -}}{{- end -}}
+<script src="https://gist.github.com/{{ $user }}/{{ $id }}.js{{ $query }}"></script>
+<noscript><a href="https://gist.github.com/{{ $user }}/{{ $id }}">View gist on GitHub</a></noscript>

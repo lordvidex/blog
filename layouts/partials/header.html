@@ -142,7 +142,7 @@
                         {{- .Pre }}
                         {{- .Name -}}
                         {{ .Post -}}
-                        {{- if .Params.External }}<span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>{{- end }}
+                        {{- if .Params.External }}<span class="external-link">{{ safeHTML (index hugo.Data.svg "external-link") }}</span>{{- end }}
                     </a>
                 </li>
                 {{- end }}

@@ -1,41 +1,42 @@
 baseURL: https://blog.lordvidex.me.uk
-languageCode: 'en-us'
+locale: 'en-US'
 title: Evans Owamoyo
 theme: PaperModX
-paginate: 10
+pagination:
+  pagerSize: 10
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDrafts: true
+buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
-pygmentsUseClasses: true
-disqusShortname: lordvidex
-
-googleAnalytics: G-96RFRJ202J
-analytics:
-  google:
-    SiteVerificationTag: G-96RFRJ202J
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+services:
+  disqus:
+    shortname: lordvidex
+  googleAnalytics:
+    id: G-96RFRJ202J
 
 minify:
   disableXML: true
 
-assets:
-  favicon: /favicon.ico
-  # gold 
-  theme_color: '#FFD700'
-
 params:
+  favicon: /favicon.ico
+  themeColor: '#FFD700'
   title: Evans Owamoyo
   description: >
     Personal Blog of Evans Owamoyo.
     Here, I write articles, share insights and log my notes and thoughts.
   author: 'Evans Owamoyo'
   keywords: [Evans, Owamoyo, Blog, Archives, Logs, lordvidex]
-  images: [avatar.jpg, "Evans Owamoyo", "https://blog.lordvidex.me.uk/"]
+  images: [avatar.jpg]
 
-  env: production
   ShowReadingTime: true
   ShowShareButtons: true
   ShowBreadCrumbs: true

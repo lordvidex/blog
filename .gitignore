@@ -4,3 +4,8 @@ frontmatter.json
 .frontmatter/
 **/.DS_Store
 .idea/
+
+# Local Hugo build artifacts
+.hugo_build.lock
+/.cache/
+/resources/_gen/

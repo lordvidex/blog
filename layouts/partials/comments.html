@@ -1,1 +1,3 @@
-{{ template "_internal/disqus.html" . }}
+{{- if hugo.IsProduction -}}
+{{- partial "disqus.html" (dict "page" . "ctx" (dict "shortname" site.Config.Services.Disqus.Shortname)) -}}
+{{- end -}}
